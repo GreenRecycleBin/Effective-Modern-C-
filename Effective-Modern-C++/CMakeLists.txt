@@ -7,5 +7,6 @@ include_directories("../../boost_1_69_0")
 
 # Add source to this project's executable.
 add_executable(item-1 "item-1.cpp")
+add_executable(item-2 "item-2.cpp")
 
 # TODO: Add tests and install targets if needed.

@@ -1,24 +1,9 @@
 ﻿#include <array>
-#include <boost/type_index.hpp>
 #include <iostream>
 
+#include "common.h"
+
 using namespace std;
-
-#define TYPE_ID(T)                    \
-  cout << BOOST_DO_STRINGIZE(T) " = " \
-       << boost::typeindex::type_id_with_cvr<T>().pretty_name() << endl;
-
-#define TEMPLATE_TYPE_ID(T, ParamType, f) \
-  template <typename T>                   \
-  void f(ParamType param) {               \
-    cout << endl;                         \
-                                          \
-    TYPE_ID(T)                            \
-                                          \
-    TYPE_ID(decltype(param))              \
-                                          \
-    cout << endl;                         \
-  };
 
 // ParamType is a Reference or Pointer, but not a Universal Reference.
 
